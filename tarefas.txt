@@ -1,0 +1,139 @@
+1. Escolha do Tema e Definição da Regra de Negócio
+Escolher uma área de mercado.
+
+    Consenssionáira 
+
+Definir quais entidades o sistema terá (ex.: alunos, pacientes, produtos, veículos…).
+    Consenssionáira.pdf
+
+Definir pelo menos 5 regras de negócio (ex.: "não vender sem estoque", "agendamento só em horários livres", etc.).
+    Venda ser presencial,
+    Pré-venda -> não obrigatória, tendo um valor mín. e um valor máx.
+    A venda ser atribuida a um vendedor, com dados e comissão
+    Compra de novos carros -> ser presencial, ser feita por um funcionário (com dados), ser do tipo Direta ou de repasse
+
+Entregar um documento simples com:
+
+Nome do sistema
+
+Descriçãos
+
+Entidades e atributos
+
+Regras de negócio
+
+2. Modelagem do Banco de Dados
+Criar o modelo lógico (tabelas, PK, FK).
+
+Construir o banco no MySQL/MariaDB.
+
+Entregar:
+
+Script SQL de criação das tabelas.
+
+3. Estruturação do Projeto
+Criar a estrutura inicial:
+
+/css
+
+/js (opcional)
+
+/img
+
+/pages
+
+/includes (conexão, cabeçalho, rodapé)
+
+Configurar o arquivo de conexão com o banco.
+
+4. Desenvolvimento dos CRUDs
+Cada entidade deve ter:
+Tela de cadastro (Create)
+
+Tela de lista/consulta (Read)
+
+Tela de edição (Update)
+
+Função de exclusão (Delete)
+
+OBS: coloque sessions e um token para realizar as operações CRUD.
+
+As telas devem incluir:
+
+Validação mínima de formulário
+
+Regras de negócio aplicadas
+
+Mensagens de sucesso/erro
+
+5. Regras de Negócio Implementadas
+Exemplos:
+
+Impedir cadastro duplicado
+
+Impedir exclusão se houver itens relacionados
+
+Calcular valores (ex.: estoque, total de venda, preço final)
+
+Validar formatos (CPF, e-mail, data…)
+
+Controlar agendamentos sem conflitos
+
+Autorizar acesso por perfil (adm/usuário comum) – opcional
+
+Você deve implementar no mínimo 5 regras de negócio funcionais.
+
+6. Layout e Usabilidade
+Criar um layout simples, mas organizado.
+
+Utilizar CSS (Bootstrap permitido).
+
+Incluir cabeçalho e rodapé padrões.
+
+Responsividade é opcional, mas recomendada.
+
+7. Testes
+Vocês devem testar:
+
+Cadastros com dados válidos e inválidos
+
+Relacionamentos
+
+Edição e exclusão
+
+Se as regras de negócio realmente funcionam
+
+8. Entrega Final
+O pacote entregue deve conter:
+
+Pastas do sistema
+
+Banco de dados (arquivo .sql)
+
+Um documento final com:
+
+Objetivo do sistema
+
+Explicação das regras de negócio implementadas
+
+Prints das principais telas
+
+9. Apresentação
+Cada aluno terá cerca de 20 minutos para:
+
+Demonstrar o sistema rodando
+
+Destacar as regras de negócio implementadas
+
+Explicar desafios e pontos fortes
+
+Requisitos Mínimos
+HTML + CSS + PHP
+
+Conexão com banco de dados
+
+Pelo menos 2 entidades com CRUD completo
+
+Pelo menos 5 regras de negócio
+
+Código organizado em pastas

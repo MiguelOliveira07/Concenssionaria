@@ -1,0 +1,74 @@
+1. Definição do Sistema
+ Nome do Sistema
+
+    Economica - concessionária mais em conta de lafaiete 
+
+Descrição
+
+    A Economica é um sistema para gerenciamento de uma concessionária, permitindo controlar veículos, clientes, funcionários, pré-vendas, vendas e compras de veículos.
+    O sistema registra negociações, comissões dos vendedores, tipos de compra e informações detalhadas de cada veículo disponível ou negociado.
+
+2. Entidades e Atributos
+
+    1. Cliente
+
+    id_cliente 
+    nome
+    cpf (PK)
+    telefone
+    email
+    senha
+
+    2. Funcionário
+
+    id_funcionario 
+    nome
+    cpf (PK)
+    matrícula
+
+    3. Veiculo
+
+    id_veiculo
+    marca
+    modelo
+    ano
+    cor
+    Kilometragem
+    preço
+    placa (PK)
+    Valor mínimo da oferta
+    Valor máximo de oferta
+    Descrição
+    Valor do desconto a vista
+    Se é de repasse ou da concessionária
+    status (disponível / vendido / em avaliação)
+
+    4. PreVenda
+    id_prevenda (PK)
+    cpf_cliente (FK)
+    placa_veiculo (FK)
+    cpf_vendedor_responsavel(FK)
+    valor_previsto
+    valor_minimo da oferta
+    valor_maximo da oferta
+    data_prevenda
+
+    5. Venda
+
+    id_venda (PK)
+    placa_veiculo (FK)
+    cpf_funcionario (FK)
+    cpf_cliente (FK)
+    valor_final
+    data_venda
+    comissao_calculada
+
+    6. CompraVeiculo
+
+    id_compra (PK)
+    cpf_funcionario (FK)
+    placa_veiculo (FK)
+    tipo_compra (Direta / Repasse)
+    valor_compra
+    data_compra
+
