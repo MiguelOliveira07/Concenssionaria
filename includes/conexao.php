@@ -1,15 +1,10 @@
 <?php
-$host = "172.16.16.113";      
-$usuario = "root";        
-$senha = "root";              
-$banco = "nome_do_banco"; 
-
-$conexao = new mysqli($host, $usuario, $senha, $banco);
-
-if ($conexao->connect_error) {
-    die("Falha na conexão: " . $conexao->connect_error);
+// CONEXÃO COM O BANCO DE DADOS
+try {
+    $pdo = new PDO("mysql:host=localhost;dbname=concessionaria-db;charset=utf8", "root", "");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+} catch (Exception $e) {
+    die("Erro: " . $e->getMessage());
 }
-
-echo "Conectado com sucesso!";
-
 ?>
