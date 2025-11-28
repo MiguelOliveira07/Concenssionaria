@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `veiculo` (
-  `Id_veiculos` int(11) NOT NULL,
+  `id_veiculos` NOT NULL,
   `status` text NOT NULL,
   `marca` text NOT NULL,
   `modelo` text NOT NULL,
@@ -39,9 +39,9 @@ CREATE TABLE `veiculo` (
   `placa` int(11) NOT NULL,
   `valor min da oferta` int(11) NOT NULL,
   `valor máx` int(11) NOT NULL,
-  `Descrição` varchar(500) NOT NULL,
-  `Desconto a vista` int(11) NOT NULL,
-  `Repasse/concenssionária` text NOT NULL
+  `descrição` varchar(500) NOT NULL,
+  `desconto a vista` int(11) NOT NULL,
+  `repasse/concenssionária` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -54,6 +54,7 @@ CREATE TABLE `veiculo` (
 ALTER TABLE `veiculo`
   ADD PRIMARY KEY (`placa`),
   ADD UNIQUE KEY `placa` (`placa`);
+  ADD UNIQUE KEY `id_veiculos` (`id_veiculos`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

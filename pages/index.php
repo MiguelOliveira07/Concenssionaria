@@ -22,7 +22,7 @@ $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <header>
-        <h1>Clássicos</h1>
+        <!-- <h1>Clássicos</h1>
         <nav>
             <ul>
                 <li>Menu</li>
@@ -30,7 +30,7 @@ $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <li>Saiba mais</li>
                 <li>Entre em contato</li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
     <main>
         <!-- <div class="card">

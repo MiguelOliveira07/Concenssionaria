@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `funcionarios` (
-  `Id_funcionarios` varchar(11) NOT NULL,
-  `Nome` varchar(100) NOT NULL,
-  `Cpf` varchar(11) NOT NULL,
+  `id_funcionarios` varchar(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `cpf` varchar(11) NOT NULL,
   `matrícula` varchar(100) NOT NULL,
-  `Senha` varchar(300) NOT NULL
+  `senha` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
