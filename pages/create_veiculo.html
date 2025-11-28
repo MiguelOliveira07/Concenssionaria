@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Veículo</title>
+    <link rel="stylesheet" href="style_veiculos.css">
+</head>
+<body>
+    <h2>Cadastro de Veículo</h2>
+
+    <form>
+
+        <label for="marca">Marca:</label><br>
+        <input type="text" id="marca" name="marca" required><br><br>
+
+        <label for="modelo">Modelo:</label><br>
+        <input type="text" id="modelo" name="modelo" required><br><br>
+
+        <label for="ano">Ano:</label><br>
+        <input type="number" id="ano" name="ano" min="1900" max="2100" required><br><br>
+
+        <label for="cor">Cor:</label><br>
+        <input type="text" id="cor" name="cor" required><br><br>
+
+        <label for="km">Kilometragem:</label><br>
+        <input type="number" id="km" name="kilometragem" required><br><br>
+
+        <label for="preco">Preço:</label><br>
+        <input type="number" id="preco" name="preco" step="0.01" required><br><br>
+
+        <label for="placa">Placa (PK):</label><br>
+        <input type="text" id="placa" name="placa" maxlength="8" required><br><br>
+
+        <label for="valor_min">Valor mínimo da oferta:</label><br>
+        <input type="number" id="valor_min" name="valor_min" step="0.01"><br><br>
+
+        <label for="valor_max">Valor máximo da oferta:</label><br>
+        <input type="number" id="valor_max" name="valor_max" step="0.01"><br><br>
+
+        <label for="descricao">Descrição:</label><br>
+        <textarea id="descricao" name="descricao" rows="4"></textarea><br><br>
+
+        <label for="desconto">Valor do desconto à vista:</label><br>
+        <input type="number" id="desconto" name="desconto" step="0.01"><br><br>
+
+        <label for="origem">Origem do veículo:</label><br>
+        <select id="origem" name="origem">
+            <option value="repasse">Repasse</option>
+            <option value="concessionaria">Concessionária</option>
+        </select><br><br>
+
+        <label for="status">Status:</label><br>
+        <select id="status" name="status">
+            <option value="disponivel">Disponível</option>
+            <option value="vendido">Vendido</option>
+            <option value="avaliacao">Em avaliação</option>
+        </select><br><br>
+
+        <button type="submit">Cadastrar Veículo</button>
+    </form>
+
+</body>
+</html>
