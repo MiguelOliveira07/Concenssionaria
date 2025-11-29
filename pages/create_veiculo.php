@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Veículo</title>
-    <link rel="stylesheet" href="style_veiculos.css">
+    <link rel="stylesheet" href="C:\Users\999532\OneDrive - SENAC em Minas - EDU\Projetos_GitHub\Concenssionaria\css\style.css">
 </head>
 <body>
     <h2>Cadastro de Veículo</h2>
