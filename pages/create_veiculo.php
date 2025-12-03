@@ -1,9 +1,18 @@
+<?php
+// CONEXÃO AO BANCO
+include 'includes\conexao.php';
+// CONSULTA AO BANCO
+$stmt = $pdo->query("SELECT Id_funcionarios, Nome, Cpf, matrícula FROM funcionarios");
+$dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Veículo</title>
-    <link rel="stylesheet" href="C:\Users\999532\OneDrive - SENAC em Minas - EDU\Projetos_GitHub\Concenssionaria\css\style.css">
+    <link rel="stylesheet" href="css\style_veiculos.css">
 </head>
 <body>
     <h2>Cadastro de Veículo</h2>

@@ -1,11 +1,10 @@
 <?php
 // CONEXÃO AO BANCO
-include "C:\Users\999532\OneDrive - SENAC em Minas - EDU\Projetos_GitHub\Concenssionaria\includes\conexao.php";
+include 'includes\conexao.php';
 // CONSULTA AO BANCO
 $stmt = $pdo->query("SELECT Id_funcionarios, Nome, Cpf, matrícula FROM funcionarios");
 $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,7 +13,7 @@ $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
-    <link rel="stylesheet" href="C:\Users\999532\OneDrive - SENAC em Minas - EDU\Projetos_GitHub\Concenssionaria\css\style.css">
+    <link rel="stylesheet" href="css\style.css">
 </head>
 
 <body>

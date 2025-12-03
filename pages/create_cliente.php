@@ -1,9 +1,17 @@
+<?php
+// CONEXÃO AO BANCO
+include 'includes\conexao.php';
+// CONSULTA AO BANCO
+$stmt = $pdo->query("SELECT Id_funcionarios, Nome, Cpf, matrícula FROM funcionarios");
+$dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Cliente</title>
-    <link rel="stylesheet" href="style_clientes.css">
+    <link rel="stylesheet" href="css\style_clientes.css">
 </head>
 <body>
     <h2>Cadastro de Cliente</h2>
