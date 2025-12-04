@@ -1,6 +1,6 @@
 <?php
 // CONEXÃO AO BANCO
-include 'includes\conexao.php';
+include 'conexao.php';
 // CONSULTA AO BANCO
 $stmt = $pdo->query("SELECT Id_funcionarios, Nome, Cpf, matrícula FROM funcionarios");
 $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -12,7 +12,7 @@ $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>Formulário de Funcionários</title>
-    <link rel="stylesheet" href="css\style_funcionarios.css">
+    <link rel="stylesheet" href="../css/style_funcionarios.css">
 </head>
 <body>
     <h2>Cadastro de Funcionário</h2>
