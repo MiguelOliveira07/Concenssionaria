@@ -16,7 +16,7 @@ $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <h2>Cadastro de Cliente</h2>
 
-    <form>
+    <form method='POST'>
         <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome" required><br><br>
 

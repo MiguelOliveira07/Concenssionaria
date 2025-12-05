@@ -6,7 +6,6 @@ $stmt = $pdo->query("SELECT Id_funcionarios, Nome, Cpf, matrícula FROM funciona
 $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -17,7 +16,7 @@ $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <h2>Cadastro de Veículo</h2>
 
-    <form>
+    <form method='POST'>
 
         <label for="marca">Marca:</label><br>
         <input type="text" id="marca" name="marca" required><br><br>
