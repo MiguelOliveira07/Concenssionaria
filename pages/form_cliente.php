@@ -1,10 +1,3 @@
-<?php
-// CONEXÃO AO BANCO
-include 'conexao.php';
-// CONSULTA AO BANCO
-$stmt = $pdo->query("SELECT Id_funcionarios, Nome, Cpf, matrícula FROM funcionarios");
-$dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -36,3 +29,33 @@ $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </form>
 </body>
 </html>
+
+<?php
+// CONEXÃO AO BANCO
+include 'conexao.php';
+
+// Verifica se o formulário foi enviado
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    // Prepara a query usando os campos do formulário
+    $query = "INSERT INTO clientes (
+                nome, cpf, telefone, email, senha
+              ) VALUES (
+                :nome, :cpf, :telefone, :email, :senha
+              )";
+
+    $stmt = $pdo->prepare($query);
+
+    // Executa a inserção
+    $stmt->execute([
+        'nome'     => $_POST['nome'],
+        'cpf'      => $_POST['cpf'],
+        'telefone' => $_POST['telefone'],
+        'email'    => $_POST['email'],
+        'senha'    => $_POST['senha']
+    ]);
+
+    echo "<script>alert('Cliente cadastrado com sucesso!');</script>";
+}
+?>
+

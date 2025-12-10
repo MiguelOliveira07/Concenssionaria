@@ -2,7 +2,7 @@
 // CONEXÃO AO BANCO
 include 'conexao.php';
 // CONSULTA AO BANCO
-$stmt = $pdo->query("SELECT Id_funcionarios, Nome, Cpf, matrícula FROM funcionarios");
+$stmt = $pdo->query("SELECT Id_funcionarios, Nome, Cpf, matricula FROM funcionarios");
 $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 

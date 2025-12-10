@@ -1,10 +1,4 @@
-<?php
-// CONEXÃO AO BANCO
-include 'conexao.php';
-// CONSULTA AO BANCO
-$stmt = $pdo->query("SELECT Id_funcionarios, Nome, Cpf, matrícula FROM funcionarios");
-$dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -69,3 +63,38 @@ $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 </body>
 </html>
+
+<?php
+include 'conexao.php';
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $query = "INSERT INTO veiculos (
+                marca, modelo, ano, cor, kilometragem, preco, placa, 
+                valor_min, valor_max, descricao, desconto, origem, status
+              ) VALUES (
+                :marca, :modelo, :ano, :cor, :kilometragem, :preco, :placa,
+                :valor_min, :valor_max, :descricao, :desconto, :origem, :status
+              )";
+
+    $stmt = $pdo->prepare($query);
+
+    $stmt->execute([
+        'marca'        => $_POST['marca'],
+        'modelo'       => $_POST['modelo'],
+        'ano'          => $_POST['ano'],
+        'cor'          => $_POST['cor'],
+        'kilometragem' => $_POST['kilometragem'],
+        'preco'        => $_POST['preco'],
+        'placa'        => $_POST['placa'],
+        'valor_min'    => $_POST['valor_min'] ?: null,
+        'valor_max'    => $_POST['valor_max'] ?: null,
+        'descricao'    => $_POST['descricao'] ?: null,
+        'desconto'     => $_POST['desconto'] ?: null,
+        'origem'       => $_POST['origem'],
+        'status'       => $_POST['status']
+    ]);
+
+    echo "<script>alert('Veículo cadastrado com sucesso!');</script>";
+}
+?>
