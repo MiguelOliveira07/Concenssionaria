@@ -1,8 +1,7 @@
 <?php
-// CONEXÃO AO BANCO
 include 'conexao.php';
 
-// LER TABELA veiculos
+
 $stmt = $pdo->query("SELECT 
         id,
         marca,

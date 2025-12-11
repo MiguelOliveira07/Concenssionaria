@@ -2,7 +2,6 @@
 // CONEXÃO AO BANCO
 include 'conexao.php';
 
-// LER TABELA clientes
 $stmt = $pdo->query("SELECT 
         cpf,
         nome,

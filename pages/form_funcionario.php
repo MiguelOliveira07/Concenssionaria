@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/style_funcionarios.css">
 </head>
 <body>
+    
     <h2>Cadastro de Funcionário</h2>
 
     <form method='POST'>
@@ -26,16 +27,23 @@
 </body>
 </html>
 
- <?php
- include 'conexao.php';
+<?php
+include 'conexao.php';
 
-// prepare sql and bind parameters
-$query = "INSERT INTO funcionarios (nome, cpf, matricula, senha) VALUES (:nome, :cpf, :matricula, :senha)";
-$stmt = $pdo->prepare($query);
-$stmt->execute([
-    "nome" => $_POST["nome"],
-    "cpf" => $_POST["cpf"], 
-    "matricula" => $_POST["matricula"],
-    "senha" => $_POST["senha"]
-]);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    // prepare sql and bind parameters
+    $query = "INSERT INTO funcionarios (nome, cpf, matricula, senha) 
+              VALUES (:nome, :cpf, :matricula, :senha)";
+    
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([
+        "nome" => $_POST["nome"],
+        "cpf" => $_POST["cpf"], 
+        "matricula" => $_POST["matricula"],
+        "senha" => $_POST["senha"]
+    ]);
+
+    echo "<p>Funcionário cadastrado com sucesso!</p>";
+}
 ?>
